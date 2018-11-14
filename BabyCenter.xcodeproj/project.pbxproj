@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21ED4B80219C672100573549 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B7F219C672100573549 /* MeViewController.swift */; };
+		21ED4B82219C672B00573549 /* BabyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B81219C672B00573549 /* BabyViewController.swift */; };
+		21ED4B84219C673500573549 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B83219C673500573549 /* SettingViewController.swift */; };
+		21ED4B86219C683800573549 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */; };
 		F3503EE4219BF9CD009C0D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503EE3219BF9CD009C0D66 /* AppDelegate.swift */; };
 		F3503EE6219BF9CD009C0D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503EE5219BF9CD009C0D66 /* ViewController.swift */; };
 		F3503EE9219BF9CD009C0D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3503EE7219BF9CD009C0D66 /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21ED4B7F219C672100573549 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		21ED4B81219C672B00573549 /* BabyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyViewController.swift; sourceTree = "<group>"; };
+		21ED4B83219C673500573549 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3503EE0219BF9CD009C0D66 /* BabyCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3503EE3219BF9CD009C0D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3503EE5219BF9CD009C0D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				F3503EFA219BFACE009C0D66 /* Me.storyboard */,
+				21ED4B7F219C672100573549 /* MeViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -118,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				F3503EF7219BFAAB009C0D66 /* Baby.storyboard */,
+				21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */,
+				21ED4B81219C672B00573549 /* BabyViewController.swift */,
 			);
 			path = Baby;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F3503EFC219BFAED009C0D66 /* Setting.storyboard */,
+				21ED4B83219C673500573549 /* SettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -205,9 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21ED4B82219C672B00573549 /* BabyViewController.swift in Sources */,
+				21ED4B80219C672100573549 /* MeViewController.swift in Sources */,
 				F3503EE6219BF9CD009C0D66 /* ViewController.swift in Sources */,
 				F36CD4FC219C1A700068ADB5 /* BabySettingViewController.swift in Sources */,
+				21ED4B86219C683800573549 /* BabyCollectionViewCell.swift in Sources */,
 				F3503EE4219BF9CD009C0D66 /* AppDelegate.swift in Sources */,
+				21ED4B84219C673500573549 /* SettingViewController.swift in Sources */,
 				F3503F06219BFB5E009C0D66 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
