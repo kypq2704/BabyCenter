@@ -16,4 +16,11 @@ class BabySettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func closeButtonClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButtonClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
