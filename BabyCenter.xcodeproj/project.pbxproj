@@ -11,6 +11,7 @@
 		21ED4B82219C672B00573549 /* BabyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B81219C672B00573549 /* BabyViewController.swift */; };
 		21ED4B84219C673500573549 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B83219C673500573549 /* SettingViewController.swift */; };
 		21ED4B86219C683800573549 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */; };
+		21ED4B89219C743B00573549 /* BabyItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B88219C743B00573549 /* BabyItemModel.swift */; };
 		F3503EE4219BF9CD009C0D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503EE3219BF9CD009C0D66 /* AppDelegate.swift */; };
 		F3503EE6219BF9CD009C0D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503EE5219BF9CD009C0D66 /* ViewController.swift */; };
 		F3503EE9219BF9CD009C0D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3503EE7219BF9CD009C0D66 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		21ED4B81219C672B00573549 /* BabyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyViewController.swift; sourceTree = "<group>"; };
 		21ED4B83219C673500573549 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
+		21ED4B88219C743B00573549 /* BabyItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyItemModel.swift; sourceTree = "<group>"; };
 		F3503EE0219BF9CD009C0D66 /* BabyCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3503EE3219BF9CD009C0D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3503EE5219BF9CD009C0D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21ED4B87219C741F00573549 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21ED4B88219C743B00573549 /* BabyItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F3503ED7219BF9CD009C0D66 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		F3503EE2219BF9CD009C0D66 /* BabyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				21ED4B87219C741F00573549 /* Model */,
 				F3503F00219BFB11009C0D66 /* View */,
 				F3503EFF219BFB03009C0D66 /* App */,
 				F3503EE5219BF9CD009C0D66 /* ViewController.swift */,
@@ -224,6 +235,7 @@
 				21ED4B86219C683800573549 /* BabyCollectionViewCell.swift in Sources */,
 				F3503EE4219BF9CD009C0D66 /* AppDelegate.swift in Sources */,
 				21ED4B84219C673500573549 /* SettingViewController.swift in Sources */,
+				21ED4B89219C743B00573549 /* BabyItemModel.swift in Sources */,
 				F3503F06219BFB5E009C0D66 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

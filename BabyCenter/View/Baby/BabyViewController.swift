@@ -13,16 +13,21 @@ class BabyViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet var collectionView: UICollectionView!
     
     let reuseIdentifier = "babycell" // also enter this string as the cell identifier in the storyboard
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48"]
+
+    var items = [BabyItemModel(n: "Time Line", i: "ic_description"),
+                 BabyItemModel(n: "Images", i: "ic_photo"),
+                 BabyItemModel(n: "Names", i: "ic_name"),
+                 BabyItemModel(n: "Music", i: "ic_music"),
+                 BabyItemModel(n: "Music", i: "ic_video")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
-            layout.minimumLineSpacing = 10
-            layout.minimumInteritemSpacing = 10
-            layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-            let size = CGSize(width:(collectionView!.bounds.width-30)/2, height: (collectionView!.bounds.width-30)/2)
+            layout.minimumLineSpacing = 20
+            layout.minimumInteritemSpacing = 20
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            let size = CGSize(width:(collectionView!.bounds.width-60)/2, height: (collectionView!.bounds.width-60)/2)
             layout.itemSize = size
         }
     }
@@ -37,8 +42,8 @@ class BabyViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! BabyCollectionViewCell
-        
-        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+        cell.timelineLabel.text = items[indexPath.row].name
+        cell.image.image = UIImage(named: items[indexPath.row].image ?? "")
         
         return cell
     }

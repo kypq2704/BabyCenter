@@ -9,5 +9,7 @@
 import UIKit
 
 class BabyCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var timelineLabel: UILabel!
+    @IBOutlet var image: UIImageView!
     
 }
