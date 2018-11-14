@@ -16,7 +16,9 @@ class TodayViewController: UIViewController {
     }
 
     @IBAction func showChildSettingView(_ sender: Any) {
-        
+        let today = UIStoryboard(name: "Today", bundle: nil)
+        let todayVC = today.instantiateViewController(withIdentifier: "BabySettingViewController")
+        self.present(todayVC, animated: true, completion: nil)
     }
     
     @IBAction func showImageView(_ sender: Any) {

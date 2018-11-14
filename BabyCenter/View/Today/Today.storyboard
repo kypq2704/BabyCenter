@@ -191,7 +191,7 @@
         <!--Baby Setting View Controller-->
         <scene sceneID="DUr-ZV-xdG">
             <objects>
-                <viewController id="jdz-jt-4V6" customClass="BabySettingViewController" customModule="BabyCenter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BabySettingViewController" id="jdz-jt-4V6" customClass="BabySettingViewController" customModule="BabyCenter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ejk-6z-nyt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
