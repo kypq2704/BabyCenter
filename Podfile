@@ -7,4 +7,8 @@ target 'BabyCenter' do
 
   # Pods for BabyCenter
   pod 'RealmSwift'
+  pod 'R.swift'
+  pod 'RxCocoa'
+  pod 'RxSwift'
+
 end

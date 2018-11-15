@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sTW-aY-u81">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sTW-aY-u81">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -228,13 +228,21 @@
                                             <action selector="saveButtonClick:" destination="jdz-jt-4V6" eventType="touchUpInside" id="1Re-0d-LHb"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0L-ga-YYO">
+                                        <rect key="frame" x="150" y="24" width="75" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.32549019607843138" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="a0L-ga-YYO" secondAttribute="bottom" constant="15" id="6tL-77-Cmp"/>
                                     <constraint firstAttribute="height" constant="60" id="BRs-d6-4Ls"/>
                                     <constraint firstAttribute="trailing" secondItem="06Z-Ym-09u" secondAttribute="trailing" constant="10" id="Bgq-qa-BOQ"/>
                                     <constraint firstAttribute="bottom" secondItem="06Z-Ym-09u" secondAttribute="bottom" constant="5" id="TQn-2e-yit"/>
                                     <constraint firstAttribute="bottom" secondItem="kqH-BD-vfT" secondAttribute="bottom" constant="5" id="hgl-BZ-AHx"/>
+                                    <constraint firstItem="a0L-ga-YYO" firstAttribute="centerX" secondItem="gWy-Se-LU2" secondAttribute="centerX" id="iGO-hZ-WYK"/>
                                     <constraint firstItem="kqH-BD-vfT" firstAttribute="leading" secondItem="gWy-Se-LU2" secondAttribute="leading" constant="10" id="r7m-82-jaH"/>
                                 </constraints>
                             </view>
@@ -269,7 +277,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="agT-uK-SUC">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="agT-uK-SUC">
                                         <rect key="frame" x="99" y="107" width="252" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
@@ -302,10 +310,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PRo-6X-ilE"/>
                     </view>
+                    <connections>
+                        <outlet property="birthDate" destination="L8z-Bw-Bvh" id="GJv-hc-D6q"/>
+                        <outlet property="genderSelect" destination="agT-uK-SUC" id="DLZ-H2-Cxu"/>
+                        <outlet property="nameTextField" destination="bIq-Hh-yt6" id="bXc-7b-uPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okc-W8-5sZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2824.8000000000002" y="93.103448275862078"/>
+            <point key="canvasLocation" x="2769" y="-4"/>
         </scene>
     </scenes>
     <resources>

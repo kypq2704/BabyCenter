@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var tabbarController: UIViewController?
+    static var shared = AppDelegate()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if DBManager.shared.getCurrentBabyInfo() == nil{
+            setBabyInfo()
+        }
+        
         return true
     }
 
@@ -43,4 +50,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+extension AppDelegate {
+    
+    func setTabbarToRootViewController() {
+        if let tabbar = R.storyboard.main.instantiateInitialViewController() {
+            self.window?.rootViewController = tabbar
+            self.tabbarController = tabbar
+        }
+        
+    }
+    
+    func setBabyInfo() {
+        if let nav = R.storyboard.today.babySettingViewController() {
+            self.window?.rootViewController = nav
+        }
+    }
+}
+
 

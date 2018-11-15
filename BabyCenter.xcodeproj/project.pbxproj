@@ -26,6 +26,10 @@
 		F36CD4FC219C1A700068ADB5 /* BabySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD4FB219C1A700068ADB5 /* BabySettingViewController.swift */; };
 		F36CD4FE219D03E50068ADB5 /* MeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD4FD219D03E50068ADB5 /* MeCollectionViewCell.swift */; };
 		F36CD501219D139F0068ADB5 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD500219D139F0068ADB5 /* VideoViewController.swift */; };
+		F36CD504219D4BBE0068ADB5 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD503219D4BBE0068ADB5 /* DBManager.swift */; };
+		F36CD506219D4C380068ADB5 /* BabyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD505219D4C380068ADB5 /* BabyInfoModel.swift */; };
+		F36CD50A219D58830068ADB5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD509219D58830068ADB5 /* R.generated.swift */; };
+		F36CD50D219D5E910068ADB5 /* UIviewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD50C219D5E910068ADB5 /* UIviewController+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		F36CD4FB219C1A700068ADB5 /* BabySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySettingViewController.swift; sourceTree = "<group>"; };
 		F36CD4FD219D03E50068ADB5 /* MeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F36CD500219D139F0068ADB5 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		F36CD503219D4BBE0068ADB5 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		F36CD505219D4C380068ADB5 /* BabyInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyInfoModel.swift; sourceTree = "<group>"; };
+		F36CD509219D58830068ADB5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F36CD50C219D5E910068ADB5 /* UIviewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIviewController+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				21ED4B88219C743B00573549 /* BabyItemModel.swift */,
+				F36CD505219D4C380068ADB5 /* BabyInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,7 +121,9 @@
 		F3503EE2219BF9CD009C0D66 /* BabyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				F36CD502219D4B970068ADB5 /* Common */,
 				21ED4B87219C741F00573549 /* Model */,
+				F36CD50B219D5C480068ADB5 /* ViewModel */,
 				F3503F00219BFB11009C0D66 /* View */,
 				F3503EFF219BFB03009C0D66 /* App */,
 				F3503EE5219BF9CD009C0D66 /* ViewController.swift */,
@@ -191,6 +202,23 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		F36CD502219D4B970068ADB5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F36CD509219D58830068ADB5 /* R.generated.swift */,
+				F36CD503219D4BBE0068ADB5 /* DBManager.swift */,
+				F36CD50C219D5E910068ADB5 /* UIviewController+extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F36CD50B219D5C480068ADB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +227,7 @@
 			buildConfigurationList = F3503EF2219BF9D0009C0D66 /* Build configuration list for PBXNativeTarget "BabyCenter" */;
 			buildPhases = (
 				DA84DCBEB8C7CE65723726CB /* [CP] Check Pods Manifest.lock */,
+				F36CD507219D56580068ADB5 /* R.Swift */,
 				F3503EDC219BF9CD009C0D66 /* Sources */,
 				F3503EDD219BF9CD009C0D66 /* Frameworks */,
 				F3503EDE219BF9CD009C0D66 /* Resources */,
@@ -271,13 +300,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BabyCenter/Pods-BabyCenter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -302,6 +337,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F36CD507219D56580068ADB5 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/BabyCenter/Common\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -310,13 +359,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				21ED4B82219C672B00573549 /* BabyViewController.swift in Sources */,
+				F36CD50D219D5E910068ADB5 /* UIviewController+extension.swift in Sources */,
+				F36CD50A219D58830068ADB5 /* R.generated.swift in Sources */,
 				21ED4B80219C672100573549 /* MeViewController.swift in Sources */,
 				F36CD4FE219D03E50068ADB5 /* MeCollectionViewCell.swift in Sources */,
 				F3503EE6219BF9CD009C0D66 /* ViewController.swift in Sources */,
 				F36CD4FC219C1A700068ADB5 /* BabySettingViewController.swift in Sources */,
 				21ED4B86219C683800573549 /* BabyCollectionViewCell.swift in Sources */,
 				F36CD501219D139F0068ADB5 /* VideoViewController.swift in Sources */,
+				F36CD504219D4BBE0068ADB5 /* DBManager.swift in Sources */,
 				F3503EE4219BF9CD009C0D66 /* AppDelegate.swift in Sources */,
+				F36CD506219D4C380068ADB5 /* BabyInfoModel.swift in Sources */,
 				21ED4B84219C673500573549 /* SettingViewController.swift in Sources */,
 				21ED4B89219C743B00573549 /* BabyItemModel.swift in Sources */,
 				F3503F06219BFB5E009C0D66 /* TodayViewController.swift in Sources */,
@@ -484,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BabyCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BabyCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
