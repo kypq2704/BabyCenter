@@ -12,6 +12,7 @@
 		21ED4B84219C673500573549 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B83219C673500573549 /* SettingViewController.swift */; };
 		21ED4B86219C683800573549 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */; };
 		21ED4B89219C743B00573549 /* BabyItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED4B88219C743B00573549 /* BabyItemModel.swift */; };
+		B010B368963F57A08D3EA863 /* Pods_BabyCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6985DF3FA7BAF620ADB7B4 /* Pods_BabyCenter.framework */; };
 		F3503EE4219BF9CD009C0D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503EE3219BF9CD009C0D66 /* AppDelegate.swift */; };
 		F3503EE6219BF9CD009C0D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3503EE5219BF9CD009C0D66 /* ViewController.swift */; };
 		F3503EE9219BF9CD009C0D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3503EE7219BF9CD009C0D66 /* Main.storyboard */; };
@@ -33,6 +34,9 @@
 		21ED4B83219C673500573549 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		21ED4B85219C683800573549 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
 		21ED4B88219C743B00573549 /* BabyItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyItemModel.swift; sourceTree = "<group>"; };
+		BE6985DF3FA7BAF620ADB7B4 /* Pods_BabyCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF37EA1513861B62037DA2E8 /* Pods-BabyCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyCenter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyCenter/Pods-BabyCenter.debug.xcconfig"; sourceTree = "<group>"; };
+		ED1BA120CC131B31E34B3A12 /* Pods-BabyCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyCenter.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyCenter/Pods-BabyCenter.release.xcconfig"; sourceTree = "<group>"; };
 		F3503EE0219BF9CD009C0D66 /* BabyCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3503EE3219BF9CD009C0D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3503EE5219BF9CD009C0D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B010B368963F57A08D3EA863 /* Pods_BabyCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,11 +74,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C8B792F25BDFE337D3CA8231 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE6985DF3FA7BAF620ADB7B4 /* Pods_BabyCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D04B0ED67B97EE5721BD8D71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF37EA1513861B62037DA2E8 /* Pods-BabyCenter.debug.xcconfig */,
+				ED1BA120CC131B31E34B3A12 /* Pods-BabyCenter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F3503ED7219BF9CD009C0D66 = {
 			isa = PBXGroup;
 			children = (
 				F3503EE2219BF9CD009C0D66 /* BabyCenter */,
 				F3503EE1219BF9CD009C0D66 /* Products */,
+				D04B0ED67B97EE5721BD8D71 /* Pods */,
+				C8B792F25BDFE337D3CA8231 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3503EF2219BF9D0009C0D66 /* Build configuration list for PBXNativeTarget "BabyCenter" */;
 			buildPhases = (
+				DA84DCBEB8C7CE65723726CB /* [CP] Check Pods Manifest.lock */,
 				F3503EDC219BF9CD009C0D66 /* Sources */,
 				F3503EDD219BF9CD009C0D66 /* Frameworks */,
 				F3503EDE219BF9CD009C0D66 /* Resources */,
+				6393B841FDC0F8875B9C1570 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +262,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6393B841FDC0F8875B9C1570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BabyCenter/Pods-BabyCenter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyCenter/Pods-BabyCenter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA84DCBEB8C7CE65723726CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyCenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3503EDC219BF9CD009C0D66 /* Sources */ = {
@@ -412,6 +479,7 @@
 		};
 		F3503EF3219BF9D0009C0D66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF37EA1513861B62037DA2E8 /* Pods-BabyCenter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -429,6 +497,7 @@
 		};
 		F3503EF4219BF9D0009C0D66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1BA120CC131B31E34B3A12 /* Pods-BabyCenter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
