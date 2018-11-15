@@ -18,7 +18,7 @@ class BabyViewController: UIViewController, UICollectionViewDataSource, UICollec
                  BabyItemModel(n: "Images", i: "ic_photo"),
                  BabyItemModel(n: "Names", i: "ic_name"),
                  BabyItemModel(n: "Music", i: "ic_music"),
-                 BabyItemModel(n: "Music", i: "ic_video")]
+                 BabyItemModel(n: "Videos", i: "ic_video")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +53,15 @@ class BabyViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        let babyItem = items[indexPath.row] 
+        switch babyItem.name {
+        case "Videos":
+            let baby = UIStoryboard(name: "Baby", bundle: nil)
+            let vc = baby.instantiateViewController(withIdentifier: "VideoViewController")
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
     }
 
 }
