@@ -30,6 +30,7 @@
 		F36CD506219D4C380068ADB5 /* BabyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD505219D4C380068ADB5 /* BabyInfoModel.swift */; };
 		F36CD50A219D58830068ADB5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD509219D58830068ADB5 /* R.generated.swift */; };
 		F36CD50D219D5E910068ADB5 /* UIviewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD50C219D5E910068ADB5 /* UIviewController+extension.swift */; };
+		F36CD50F21AE6D4D0068ADB5 /* BabyVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CD50E21AE6D4D0068ADB5 /* BabyVideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F36CD505219D4C380068ADB5 /* BabyInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyInfoModel.swift; sourceTree = "<group>"; };
 		F36CD509219D58830068ADB5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F36CD50C219D5E910068ADB5 /* UIviewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIviewController+extension.swift"; sourceTree = "<group>"; };
+		F36CD50E21AE6D4D0068ADB5 /* BabyVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyVideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F36CD500219D139F0068ADB5 /* VideoViewController.swift */,
+				F36CD50E21AE6D4D0068ADB5 /* BabyVideoTableViewCell.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				21ED4B84219C673500573549 /* SettingViewController.swift in Sources */,
 				21ED4B89219C743B00573549 /* BabyItemModel.swift in Sources */,
 				F3503F06219BFB5E009C0D66 /* TodayViewController.swift in Sources */,
+				F36CD50F21AE6D4D0068ADB5 /* BabyVideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

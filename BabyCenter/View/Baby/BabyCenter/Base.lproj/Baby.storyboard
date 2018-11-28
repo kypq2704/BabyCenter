@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,14 +131,70 @@
                     <view key="view" contentMode="scaleToFill" id="p0i-uv-1j5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-Sq-SMa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BabyVideoTableViewCell" rowHeight="250" id="TS0-e1-eRg" customClass="BabyVideoTableViewCell" customModule="BabyCenter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TS0-e1-eRg" id="nsf-Wg-LJn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 &amp; 2 Weeks Pregnant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCc-Cj-hOU">
+                                                    <rect key="frame" x="10" y="10" width="355" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-TA-xIB">
+                                                    <rect key="frame" x="10" y="39.5" width="355" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="3to-M3-acf"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Mna-TA-xIB" secondAttribute="bottom" constant="10" id="7rU-bO-9vB"/>
+                                                <constraint firstItem="zCc-Cj-hOU" firstAttribute="leading" secondItem="nsf-Wg-LJn" secondAttribute="leading" constant="10" id="92N-6j-qVq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mna-TA-xIB" secondAttribute="trailing" constant="10" id="B90-TB-5aH"/>
+                                                <constraint firstItem="zCc-Cj-hOU" firstAttribute="top" secondItem="nsf-Wg-LJn" secondAttribute="top" constant="10" id="D52-cZ-cVs"/>
+                                                <constraint firstAttribute="trailing" secondItem="zCc-Cj-hOU" secondAttribute="trailing" constant="10" id="anZ-f8-9vP"/>
+                                                <constraint firstItem="Mna-TA-xIB" firstAttribute="leading" secondItem="nsf-Wg-LJn" secondAttribute="leading" constant="10" id="gGO-HJ-acb"/>
+                                                <constraint firstItem="Mna-TA-xIB" firstAttribute="top" secondItem="zCc-Cj-hOU" secondAttribute="bottom" constant="10" id="hpD-YK-elB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="thubnailImage" destination="Mna-TA-xIB" id="Crs-zR-lWo"/>
+                                            <outlet property="titleLabel" destination="zCc-Cj-hOU" id="4ZX-ch-cgh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fba-XH-7Cb" id="kJp-Se-iWI"/>
+                                    <outlet property="delegate" destination="Fba-XH-7Cb" id="8uf-rw-grf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VS3-Sq-SMa" firstAttribute="top" secondItem="GrT-wA-WnZ" secondAttribute="top" id="7pK-m9-nLj"/>
+                            <constraint firstItem="GrT-wA-WnZ" firstAttribute="bottom" secondItem="VS3-Sq-SMa" secondAttribute="bottom" id="9bV-rI-itr"/>
+                            <constraint firstItem="GrT-wA-WnZ" firstAttribute="trailing" secondItem="VS3-Sq-SMa" secondAttribute="trailing" id="F1K-iB-4XJ"/>
+                            <constraint firstItem="VS3-Sq-SMa" firstAttribute="leading" secondItem="GrT-wA-WnZ" secondAttribute="leading" id="SDO-Ed-7JV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GrT-wA-WnZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Videos" leftItemsSupplementBackButton="YES" id="0Mp-FO-l9W"/>
+                    <connections>
+                        <outlet property="tableView" destination="VS3-Sq-SMa" id="hm9-kw-0kN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90F-5S-5Cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="117"/>
+            <point key="canvasLocation" x="629.60000000000002" y="116.49175412293854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hEw-8n-qKM">

@@ -16,9 +16,21 @@ class BabySettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let babyInfo = DBManager.shared.getCurrentBabyInfo(){
+            setBabyInfo(info: babyInfo)
+        }
+    }
+    
+    func setBabyInfo(info: BabyInfoModel){
+        nameTextField.text = info.name
+        genderSelect.selectedSegmentIndex = info.gender
+        birthDate.setDate(info.birthDay ?? Date(), animated: true)
+    }
+    
     @IBAction func closeButtonClick(_ sender: Any) {
         if DBManager.shared.getCurrentBabyInfo() != nil {
             self.dismiss(animated: true, completion: nil)
@@ -32,10 +44,10 @@ class BabySettingViewController: UIViewController {
         }
         if DBManager.shared.getCurrentBabyInfo() == nil {
             DBManager.shared.saveCurrentBabyInfo(_name: nameTextField.text ?? "" , _gender: genderSelect.selectedSegmentIndex , _birth: birthDate.date )
-//            AppDelegate.shared.setTabbarToRootViewController()
+            AppDelegate.shared.setTabbarToRootViewController()
         } else {
             DBManager.shared.saveCurrentBabyInfo(_name: nameTextField.text ?? "" , _gender: genderSelect.selectedSegmentIndex , _birth: birthDate.date )
-//            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

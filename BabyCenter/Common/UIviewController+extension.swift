@@ -16,3 +16,26 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 }
+
+
+extension Date {
+    func toString( dateFormat format  : String ) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+}
+
+extension UIImage {
+    convenience init?(url: URL?) {
+        guard let url = url else { return nil }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            self.init(data: data)
+        } catch {
+            print("Cannot load image from url: \(url) with error: \(error)")
+            return nil
+        }
+    }
+}

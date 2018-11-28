@@ -29,16 +29,17 @@ class DBManager: NSObject {
     
     func saveCurrentBabyInfo (_name: String, _gender: Int, _birth: Date){
         if let object = realm.objects(BabyInfoModel.self).first {
+            
             try! realm.write {
                 object.name = _name
-//                object.gender = _gender
-//                object.birthDay = _birth
+                object.gender = _gender
+                object.birthDay = _birth
             }
         } else {
             let baby = BabyInfoModel()
             baby.name = _name
-//            baby.gender = _gender
-//            baby.birthDay = _birth
+            baby.gender = _gender
+            baby.birthDay = _birth
             addObject(baby)
         }
     }
